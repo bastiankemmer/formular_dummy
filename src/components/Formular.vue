@@ -1,6 +1,11 @@
 <template>
     <div class="container-fluid">
         <div class="row">
+            <div class="col-4">
+                <button @click="printPage()">Print</button>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12">
                 <Header class="text-left" text="1. Persönliche Angaben zum Vertragspartner"></Header>
             </div>
@@ -129,6 +134,11 @@
         },
         props: {
             msg: String
+        },
+        methods: {
+            printPage() {
+                document.getElementsByTagName("body")[0].contentWindow().print();
+            }
         }
     }
 </script>
