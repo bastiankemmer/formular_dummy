@@ -2,10 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-4">
-                <button @click="printPage()">Print</button>
+                <button class="btn btn-primary full-size" @click="printPage()">Print</button>
             </div>
+            <div class="col-8"></div>
         </div>
-        <div class="row">
+        <div class="row margin-top-sm">
             <div class="col-12">
                 <Header class="text-left" text="1. Persönliche Angaben zum Vertragspartner"></Header>
             </div>
@@ -40,10 +41,10 @@
             <div class="d-none d-md-block col-md-2">
             </div>
             <div class="col-md-5 col-sm-6 d-block">
-                <InputField label="Land" value="Deutschland" disabled="true"></InputField>
+                <InputField label="Land" value="Deutschland" disabled></InputField>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-top-sm">
             <div class="col-12">
                 <Header class="text-left" text="2. Persönliche Angaben zum Vertragspartner"></Header>
             </div>
@@ -78,10 +79,10 @@
             <div class="d-none d-md-block col-md-2">
             </div>
             <div class="col-md-5 col-sm-6 d-block">
-                <InputField label="Land" value="Deutschland" disabled="true"></InputField>
+                <InputField label="Land" value="Deutschland" disabled></InputField>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-top-sm">
             <div class="col-12">
                 <Header class="text-left" text="3. Persönliche Angaben zum Vertragspartner"></Header>
             </div>
@@ -116,7 +117,7 @@
             <div class="d-none d-md-block col-md-2">
             </div>
             <div class="col-md-5 col-sm-6 d-block">
-                <InputField label="Land" value="Deutschland" disabled="true"></InputField>
+                <InputField label="Land" value="Deutschland" disabled></InputField>
             </div>
         </div>
     </div>
@@ -137,7 +138,7 @@
         },
         methods: {
             printPage() {
-                document.getElementsByTagName("body")[0].contentWindow().print();
+                window.print();
             }
         }
     }
@@ -165,5 +166,9 @@
 
     .margin-top-sm {
         margin-top: 1em;
+    }
+
+    .full-size {
+        width: 100%;
     }
 </style>
